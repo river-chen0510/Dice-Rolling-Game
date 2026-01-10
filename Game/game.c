@@ -117,14 +117,8 @@ int greeting(){
         }
 
         if(selection == 3){
-            // TODO: Do testing once multi-file system is made
+           endGame();
         }
-    }
-
-    int endGame(){
-        printf("\n \n");
-        printf("Exiting game...");
-        return 0;
     }
 }
 
