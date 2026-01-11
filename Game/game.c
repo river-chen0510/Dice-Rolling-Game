@@ -23,7 +23,7 @@ int computerResult[100];
 
 int rounds[100];
 
-int rollDice(){
+void rollDice(){
     rounds[n] = n;
 
     //* Generate player number
@@ -68,8 +68,7 @@ int rollDice(){
     // TODO: in main.c, put srand(time(0)) when calling rollDice();
 }
 
-int displayResults(){
-        int size = 1;
+void displayResults(){
 
         printf("Round Results: \n \n");
 
@@ -90,7 +89,7 @@ int displayResults(){
         printf("Wins = You: %d. Computer: %d. Ties: %d. \n", playerWins, computerWins, ties);
 }
 
-int greeting(){
+void greeting(){
     while(1){
         printf("Welcome to the dice rolling game! \n");
         printf("Please select an option: \n \n");
@@ -106,28 +105,5 @@ int greeting(){
 
         //* Buffer clear
         while (getchar() != '\n');
-
-        if(selection == 1){
-            rollDice();
-        }
-
-        if(selection == 2){
-            displayResults();
-            // TODO: Do testing once multi-file system is made
-        }
-
-        if(selection == 3){
-           endGame();
-        }
     }
-}
-
-//! Testing
-int main(){
-    greeting();
-    rollDice();
-    displayResults();
-
-
-    return 0;
 }

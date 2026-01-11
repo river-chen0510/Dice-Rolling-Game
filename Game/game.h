@@ -2,17 +2,17 @@
 #define GAME_H
 
 //* variables
-extern int selection = 0;
-extern int gamesPlayed = 0;
+extern int selection;
+extern int gamesPlayed;
 
-extern int playerTotal = 0;
-extern int computerTotal = 0;
+extern int playerTotal;
+extern int computerTotal;
 
-extern int computerWins = 0;
-extern int playerWins = 0;
-extern int ties = 0;
+extern int computerWins;
+extern int playerWins;
+extern int ties;
 
-extern int n = 0;
+extern int n;
 
 //* arrays
 extern int player_roll[2];

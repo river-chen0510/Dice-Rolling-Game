@@ -1,22 +1,21 @@
-if [ "$1" = "build"]; then
+if [ "$1" = "build" ]; then
 
     echo "Building project..."
 
     gcc -Wall -Wextra -g \
         main.c \
-        game.c\
-        game.h \
+        game.c \
         -o main.out
 
-    echo "Project built!"
+    echo "Build completed"
 
-elif [ "$1" = "clean"]; then
+elif [ "$1" = "clean" ]; then
 
     echo "Cleaning project..."
 
     rm main.out
-    rm -r main.out.DYSM
+    rm -r main.out.dSYM
 
-    echo "Project cleaned!"
+    echo "Clean completed"
 
 fi
