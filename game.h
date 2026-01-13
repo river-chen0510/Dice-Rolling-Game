@@ -27,6 +27,3 @@ void displayResults();
 void rollDice();
 
 #endif
-
-
-

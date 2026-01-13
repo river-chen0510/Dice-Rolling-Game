@@ -92,7 +92,7 @@ void displayResults(){
 void greeting(){
     while(1){
         printf("Welcome to the dice rolling game! \n");
-        printf("Please select an option: \n \n");
+        printf("Please select an option: \n ");
 
         printf("1. Play a round \n");
         printf("2. Show results \n");
