@@ -8,7 +8,7 @@ int main(){
         greeting();
     
         if(selection < 1 || selection > 3){
-            printf("Invalid input! Please try again!");
+            printf("Invalid input! Please try again! \n \n \n ");
         }
 
         if(selection == 1){
