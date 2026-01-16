@@ -10,7 +10,7 @@
 - [3. Implementations](#3-Implementations)
     - [3.1. Advanced Error Detection](#31-Advanced-Error-Detection)
     - [3.2. Number Generation](#32-Number-Generation)
-    - [3.3. Advanced Memory](#33-Advanded-Memory)
+    - [3.3. Advanced Memory](#33-Advanced-Memory)
   
 # 1. Description
 This game is a simple dice-rolling game. It is written in C, made with a multi-file system, with a build-clean system to compile the files, and clean them once they have been run. **_This game is meant to be played in the terminal._**
@@ -121,6 +121,7 @@ This dice rolling game has many implementations, including:
 - Continue running after errors
 - Number generation
 - Memory for rounds, scores, wins, ties
+- Multi File System
 - Shell commands
 
 ## 3.1. Advanced Error Detection
@@ -214,19 +215,46 @@ computerResult[100]
 ```
 
 ## 3.3. Advanced Memory
+To make selection 2 work (display results), this game needs to be able to store the results of the player and computer, of each round. Becuase it's impossible to make an endless array, The maximum number of rounds that can be played is 100. 
+```
+int rounds = 100;
 
+int playerResult[100];
+int computerResult[100];
+```
+With a max cap of 100, the game can now store the score of each round. To have it match with the round number when printed, the game adjusts the first print so it doesn't say round 0.
+```
+rounds[i] = rounds[i] + 1;
+```
+The game also keeps track of the amount of wins and losses the player and computer has, and how many ties accored.
 
+All this data can be accessed by selecting 2 in the main menu.
 
+Example after 10 rounds played:
+```
+Please enter your selection: 2
 
+Round Results: 
+ 
+Games played: 10 
+ 
+Round 1: You: 4, Computer: 9 
+Round 2: You: 8, Computer: 4 
+Round 3: You: 8, Computer: 7 
+Round 4: You: 4, Computer: 10 
+Round 5: You: 4, Computer: 10 
+Round 6: You: 6, Computer: 10 
+Round 7: You: 9, Computer: 5 
+Round 8: You: 5, Computer: 5 
+Round 9: You: 5, Computer: 7 
+Round 10: You: 4, Computer: 8 
 
+Wins = You: 3. Computer: 6. Ties: 1. 
+```
+_Note that the results are the dice rolls added up, not each seperate dice roll._
 
-
-
-
-
-
-
-
+## 3.4. Multi File System
+Because of the length of the code in this game, it is neccecary for me to split it into three different files. One to make functions, one to declare arrays and variables, and one file to put everything together and make it run. 
 
 
 
