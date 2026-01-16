@@ -13,6 +13,9 @@
     - [3.3. Advanced Memory](#33-Advanced-Memory)
     - [3.4. Multi-File-System](#34-Multi-File-System)
     - [3.5. Shell Commands](#35-Shell-Commands)
+- [4. Flow Chart](#4-Flow-Chart)
+- [5. The End]
+    - [5.1. Contact](#51-Contact)
   
 # 1. Description
 This game is a simple dice-rolling game. It is written in C, made with a multi-file system, with a build-clean system to compile the files, and clean them once they have been run. **_This game is meant to be played in the terminal._**
@@ -312,6 +315,15 @@ main.out
 ```
 
 Use these simple steps to run, clean, and manage the game. 
+
+# 4. Flow Chart
+
+# 5. The End
+This concludes the README about my simple Dice Rolling Game! Thanks for reading!
+
+## 5.1 Contact
+If you really enjoyed this README, have any questions, comments, or suggestions, feel free to contact me via email at riverchen0510@gmail.com. **_No spam please!_**
+
 
 
 
