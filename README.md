@@ -24,17 +24,6 @@ Throughout this capstone project, I learned many fundamentals of C, including:
 - Character and string arrays
 - Multi-file system
 
-# 2. Features
-This dice rolling game has many features, including: 
-
-- Main menu that will return after every selection
-- Advanced error detection for characters, numbers, etc.
-- Continue running after errors
-- Number generation x4
-- Memory for rounds, scores, wins, ties
-- Shell commands to compile and clean the project
-- Shell commands to run the game
-
 # 3. Gameplay
 The dice rolling game has three options in the main menu. Each option can be selected by entering a number from 1 to 3. 
 The options are:
@@ -52,32 +41,6 @@ Please select an option:
 2. Show results
 3. Exit
 Please enter your selection:
-```
-
-If there is an invalid input, such as entering a number other than 1, 2, or 3, or if a character is entered, the game will detect it and display an error message.
-and then it will prompt the user to try again. 
-
-Possible Errors: 
-
-Number too high:  
-``` 
-Please enter your selection: 5
-
-Invalid input! Please try again!
-```
-
-Number too low: 
-```
-Please enter your selection: 0
-
-Invalid input! Please try again!
-```
-
-Character inputted:
-```
-Please enter your selection: c
-
-Invalid input! Please try again!
 ```
 
 ## 3.1. Rolling the Dice
@@ -148,6 +111,109 @@ riverchen@Mac Capstone 3-Dice-Rolling-Game
 ```
 
 # 4. Implementations
+This simple Dice Rolling Game features many implementations, including: 
+
+This dice rolling game has many implementations, including: 
+
+- Advanced error detection for characters, numbers, etc.
+- Continue running after errors
+- Number generation
+- Memory for rounds, scores, wins, ties
+- Shell commands
+
+## 4.1. Advanced Error Detection
+Becuase this game need's the user's input in the main menu, I have added error detection so the game can detect characters, strings, and numbers other than 1, 2, or 3.
+
+Number too high:  
+``` 
+Please enter your selection: 5
+
+Invalid input! Please try again!
+```
+
+Number too low: 
+```
+Please enter your selection: 0
+
+Invalid input! Please try again!
+```
+
+Character inputted:
+```
+Please enter your selection: c
+
+Invalid input! Please try again!
+```
+
+String inputted:
+```
+Please enter your selection: im confused
+
+Invalid input! Please try again!
+```
+
+After an error is detected, the code will return to the main menu to let the user try again. 
+```
+Please enter your selection: im confused
+
+Invalid input! Please try again!
+
+// Returned to main menu
+Welcome to the dice rolling game!
+Please select an option: 
+1. Play a round 
+2. Show results 
+3. Exit 
+Please enter your selection: 
+```
+## 4.2. Number Generation
+This dice rolling requires four numbers between 1 and 6 to be generated, to imitate rolling two dice. The game will roll for the player, and the computer the player is competing against. 
+To be able to roll these dice, the game will roll the dice twice for the player and computer, then the two rolls will be stored into an array to be printed and added up. 
+To generate these numbers, I used a for loop that loops twice to generate 2 numbers and store them into an array. When another round clears, the numbers inside the array will be reset, and new numbers will be generated. This allows the game to generate fresh numbers for each round. 
+
+Three round example: 
+
+**Round 1:**
+```
+Please enter your selection: 1
+
+You rolled: 5 and 3. Total = 8 
+Computer rolled: 1 and 3. Total = 4 
+ 
+You won this round! 
+
+```
+
+**Round 2:**
+```
+Please enter your selection: 1
+
+You rolled: 6 and 2. Total = 8 
+Computer rolled: 1 and 6. Total = 7 
+ 
+You won this round! 
+```
+
+**Round 3:**
+```
+Please enter your selection: 1
+
+ 
+You rolled: 1 and 3. Total = 4 
+Computer rolled: 4 and 6. Total = 10 
+ 
+The computer won this round!
+```
+
+As you can see, after each round, the numbers generated change. After the total is calculated for both the player and computer, it will be stored in these two arrays:
+```
+playerResult[100]
+computerResult[100]
+```
+
+
+
+
 
 
 
