@@ -8,7 +8,7 @@
     - [3.1. Rolling the Dice](#31-Rolling-the-Dice)
     - [3.2. Displaying Results](#32-Displaying-Results)
     - [3.3. Ending the Game](#33-Ending-The-Game)
-- [4. Implementation](#4-Implementation)
+- [4. Implementations](#4-Implementations)
   
 # 1. Description
 This game is a simple dice-rolling game. It is written in C, made with a multi-file system, with a build-clean system to compile the files, and clean them once they have been run. **_This game is meant to be played in the terminal._**
