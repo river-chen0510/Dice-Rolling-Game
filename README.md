@@ -1,5 +1,15 @@
 # Dice Rolling Game
 
+## Table of Contents
+- [1. Description](#1-Description)
+    - [1.1. What I Learned](#11-What-I-Learned)
+- [2. Features](#2-Features)
+- [3. Gameplay](#3-Gameplay)
+    - [3.1. Rolling the Dice](#31-Rolling-the-Dice)
+    - [3.2. Displaying Results](#32-Displaying-Results)
+    - [3.3. Ending the Game](#33-Ending-The-Game)
+- [4. Implementation](#4-Implementation)
+  
 # 1. Description
 This game is a simple dice-rolling game. It is written in C, made with a multi-file system, with a build-clean system to compile the files, and clean them once they have been run. **_This game is meant to be played in the terminal._**
 
@@ -7,7 +17,7 @@ When played, the game will roll two dice for both the player and the computer. T
 Whichever roll got the most points will be declared the winner with a message. If there is a tie, the game will also declare a tie, and no one will get a point. 
 Then, the game will store what each player's score was inside an array, along with what round it was in. 
 
-# 1.1. What I Learned
+## 1.1. What I Learned
 Throughout this capstone project, I learned many fundamentals of C, including: 
 - **Arrays**
 - **Project management using shell commands and Makefile**
@@ -17,7 +27,13 @@ Throughout this capstone project, I learned many fundamentals of C, including:
 # 2. Features
 This dice rolling game has many features, including: 
 
--
+- Main menu that will return after every selection
+- Advanced error detection for characters, numbers, etc.
+- Continue running after errors
+- Number generation x4
+- Memory for rounds, scores, wins, ties
+- Shell commands to compile and clean the project
+- Shell commands to run the game
 
 # 3. Gameplay
 The dice rolling game has three options in the main menu. Each option can be selected by entering a number from 1 to 3. 
@@ -63,7 +79,6 @@ Please enter your selection: c
 
 Invalid input! Please try again!
 ```
-
 
 ## 3.1. Rolling the Dice
 If the player selects 1, the game will instantly roll two dice for the player and the computer. Then, their rolls will be added up and stored in an array, along with what round they are 
@@ -132,7 +147,7 @@ Game is ending...
 riverchen@Mac Capstone 3-Dice-Rolling-Game
 ```
 
-# 4. 
+# 4. Implementations
 
 
 
