@@ -3,15 +3,14 @@
 ## Table of Contents
 - [1. Description](#1-Description)
     - [1.1. What I Learned](#11-What-I-Learned)
-- [2. Features](#2-Features)
-- [3. Gameplay](#3-Gameplay)
-    - [3.1. Rolling the Dice](#31-Rolling-the-Dice)
-    - [3.2. Displaying Results](#32-Displaying-Results)
-    - [3.3. Ending the Game](#33-Ending-The-Game)
-- [4. Implementations](#4-Implementations)
-    - [4.1. Advanced Error Detection](#41-Advanced-Error-Detection)
-    - [4.2. Number Generation](#42-Number-Generation)
-    - [4.3. Advanced Memory](#43-Advanded-Memory)
+- [2. Gameplay](#2-Gameplay)
+    - [2.1. Rolling the Dice](#21-Rolling-the-Dice)
+    - [2.2. Displaying Results](#22-Displaying-Results)
+    - [2.3. Ending the Game](#23-Ending-The-Game)
+- [3. Implementations](#3-Implementations)
+    - [3.1. Advanced Error Detection](#31-Advanced-Error-Detection)
+    - [3.2. Number Generation](#32-Number-Generation)
+    - [3.3. Advanced Memory](#33-Advanded-Memory)
   
 # 1. Description
 This game is a simple dice-rolling game. It is written in C, made with a multi-file system, with a build-clean system to compile the files, and clean them once they have been run. **_This game is meant to be played in the terminal._**
@@ -27,7 +26,7 @@ Throughout this capstone project, I learned many fundamentals of C, including:
 - Character and string arrays
 - Multi-file system
 
-# 3. Gameplay
+# 2. Gameplay
 The dice rolling game has three options in the main menu. Each option can be selected by entering a number from 1 to 3. 
 The options are:
 
@@ -46,7 +45,7 @@ Please select an option:
 Please enter your selection:
 ```
 
-## 3.1. Rolling the Dice
+## 2.1. Rolling the Dice
 If the player selects 1, the game will instantly roll two dice for the player and the computer. Then, their rolls will be added up and stored in an array, along with what round they are 
 currently on. Whichever player's roll is higher will be declared the winner, and their number of wins will be increased by one. If there is a tie, the game will say so, and neither the player nor the game will receive a point.
 **_The maximum number of rounds the player can play is 100._**
@@ -81,7 +80,7 @@ Computer rolled 4 and 1. Total = 5
 It's a tie!
 ```
 
-## 3.2. Displaying Results
+## 2.2. Displaying Results
 After the player plays some rounds, they will want to view their results. When selection 2 is entered, the player will be brought to the results page. Here, information such as **Games Played**, **Round #**,
 **Scores for the player and computer**, **Wins**, and **Ties** will be shown. 
 
@@ -102,7 +101,7 @@ Wins = You: 1. Computer: 1. Ties: 1
 Welcome to the Dice Rolling Game!
 ```
 
-## 3.3. Ending the Game
+## 2.3. Ending the Game
 Once the player has played enough rounds, they will want to end the game. To end the game, simply select 3. 
 ```
 Please enter your selection: 3
@@ -113,7 +112,7 @@ Game is ending...
 riverchen@Mac Capstone 3-Dice-Rolling-Game
 ```
 
-# 4. Implementations
+# 3. Implementations
 This simple Dice Rolling Game features many implementations, including: 
 
 This dice rolling game has many implementations, including: 
@@ -124,7 +123,7 @@ This dice rolling game has many implementations, including:
 - Memory for rounds, scores, wins, ties
 - Shell commands
 
-## 4.1. Advanced Error Detection
+## 3.1. Advanced Error Detection
 Becuase this game need's the user's input in the main menu, I have added error detection so the game can detect characters, strings, and numbers other than 1, 2, or 3.
 
 Number too high:  
@@ -169,7 +168,7 @@ Please select an option:
 3. Exit 
 Please enter your selection: 
 ```
-## 4.2. Number Generation
+## 3.2. Number Generation
 This dice rolling requires four numbers between 1 and 6 to be generated, to imitate rolling two dice. The game will roll for the player, and the computer the player is competing against. 
 To be able to roll these dice, the game will roll the dice twice for the player and computer, then the two rolls will be stored into an array to be printed and added up. 
 To generate these numbers, I used a for loop that loops twice to generate 2 numbers and store them into an array. When another round clears, the numbers inside the array will be reset, and new numbers will be generated. This allows the game to generate fresh numbers for each round. 
@@ -214,7 +213,7 @@ playerResult[100]
 computerResult[100]
 ```
 
-## 4.3. Advanced Memory
+## 3.3. Advanced Memory
 
 
 
