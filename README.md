@@ -11,7 +11,7 @@
 - [4. Implementations](#4-Implementations)
     - [4.1. Advanced Error Detection](#41-Advanced-Error-Detection)
     - [4.2. Number Generation](#42-Number-Generation)
-    - [4.3. Memory](#43-Memory)
+    - [4.3. Advanced Memory](#43-Advanded-Memory)
   
 # 1. Description
 This game is a simple dice-rolling game. It is written in C, made with a multi-file system, with a build-clean system to compile the files, and clean them once they have been run. **_This game is meant to be played in the terminal._**
