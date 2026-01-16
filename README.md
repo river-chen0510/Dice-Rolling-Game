@@ -11,6 +11,8 @@
     - [3.1. Advanced Error Detection](#31-Advanced-Error-Detection)
     - [3.2. Number Generation](#32-Number-Generation)
     - [3.3. Advanced Memory](#33-Advanced-Memory)
+    - [3.4. Multi-File-System](#34-Multi-File-System)
+    - [3.5. Shell Commands](#35-Shell-Commands)
   
 # 1. Description
 This game is a simple dice-rolling game. It is written in C, made with a multi-file system, with a build-clean system to compile the files, and clean them once they have been run. **_This game is meant to be played in the terminal._**
@@ -121,11 +123,11 @@ This dice rolling game has many implementations, including:
 - Continue running after errors
 - Number generation
 - Memory for rounds, scores, wins, ties
-- Multi File System
+- Multi-File System
 - Shell commands
 
 ## 3.1. Advanced Error Detection
-Becuase this game need's the user's input in the main menu, I have added error detection so the game can detect characters, strings, and numbers other than 1, 2, or 3.
+Becuase this game needs the user's input in the main menu, I have added error detection so the game can detect characters, strings, and numbers other than 1, 2, or 3.
 
 Number too high:  
 ``` 
@@ -150,14 +152,14 @@ Invalid input! Please try again!
 
 String inputted:
 ```
-Please enter your selection: im confused
+Please enter your selection: I'm confused
 
 Invalid input! Please try again!
 ```
 
 After an error is detected, the code will return to the main menu to let the user try again. 
 ```
-Please enter your selection: im confused
+Please enter your selection: I'm confused
 
 Invalid input! Please try again!
 
@@ -174,7 +176,7 @@ This dice rolling requires four numbers between 1 and 6 to be generated, to imit
 To be able to roll these dice, the game will roll the dice twice for the player and computer, then the two rolls will be stored into an array to be printed and added up. 
 To generate these numbers, I used a for loop that loops twice to generate 2 numbers and store them into an array. When another round clears, the numbers inside the array will be reset, and new numbers will be generated. This allows the game to generate fresh numbers for each round. 
 
-Three round example: 
+Three-round example: 
 
 **Round 1:**
 ```
@@ -222,11 +224,11 @@ int rounds = 100;
 int playerResult[100];
 int computerResult[100];
 ```
-With a max cap of 100, the game can now store the score of each round. To have it match with the round number when printed, the game adjusts the first print so it doesn't say round 0.
+With a max cap of 100, the game can now store the score of each round. To have it match the round number when printed, the game adjusts the first print so it doesn't say round 0.
 ```
 rounds[i] = rounds[i] + 1;
 ```
-The game also keeps track of the amount of wins and losses the player and computer has, and how many ties accored.
+The game also keeps track of the number of wins and losses the player and computer have, and how many ties occurred.
 
 All this data can be accessed by selecting 2 in the main menu.
 
@@ -251,10 +253,73 @@ Round 10: You: 4, Computer: 8
 
 Wins = You: 3. Computer: 6. Ties: 1. 
 ```
-_Note that the results are the dice rolls added up, not each seperate dice roll._
+_Note that the results are the dice rolls added up, not each separate dice roll._
 
-## 3.4. Multi File System
-Because of the length of the code in this game, it is neccecary for me to split it into three different files. One to make functions, one to declare arrays and variables, and one file to put everything together and make it run. 
+## 3.4. Multi-File System
+Because of the length of the code in this game, I must split it into three different files. One to make functions, one to declare arrays and variables, and one file to put everything together and make it run. 
+File Examples:
+```
+game.c // what each function does
+game.h // declarations
+main.c // main file, puts everything together
+```
+
+## 3.5. Shell Commands
+To run the code, compile it, and clean up files, a shell script is used. This script compiles the game, creating an executable file that can be run. It then cleans up the generated files after the game is played.
+
+**Files before**
+```
+build-clean.sh //shell
+game.c
+game.h
+main.c 
+```
+
+**Compiling**
+To compile, run this in the terminal:
+```
+./build-clean.sh build
+```
+After, the code should print:
+```
+./build-clean.sh build
+Building project...
+Build completed //Confirms code was compiled
+riverchen@Mac Capstone-3-Dice-Rolling-Game % 
+```
+
+After the game is compiled, main.out, and a folder will be generated:
+```
+main.out.DYSM
+main.out
+```
+
+To run the game, just type in:
+```
+./main.out
+```
+
+**Cleaning**
+After playing the game, you will need to clean up the files, as you don't want any extra files. To clean up extra files, type this in the terminal:
+```
+./build-clean.sh clean
+```
+
+This will delete:
+```
+main.out.DYSM
+main.out
+```
+
+Use these simple steps to run, clean, and manage the game. 
+
+
+
+
+
+
+
+
 
 
 
