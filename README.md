@@ -317,6 +317,9 @@ main.out
 Use these simple steps to run, clean, and manage the game. 
 
 # 4. Flow Chart
+This is a simple flow chart I made to show how my game's logic works.
+<img width="720" height="627" alt="image" src="https://github.com/user-attachments/assets/90dec4c1-239c-4509-b6e5-87fdf1e38698" />
+
 
 # 5. The End
 This concludes the README about my simple Dice Rolling Game! Thanks for reading!
