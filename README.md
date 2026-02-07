@@ -10,7 +10,7 @@
 - [3. Implementations](#3-Implementations)
     - [3.1. Advanced Error Detection](#31-Advanced-Error-Detection)
     - [3.2. Number Generation](#32-Number-Generation)
-    - [3.3. Advanced Memory](#33-Advanced-"Memory")
+    - [3.3. Advanced Memory](#33-Advanced-Memory)
     - [3.4. Multi-File-System](#34-Multi-File-System)
     - [3.5. Shell Commands](#35-Shell-Commands)
 - [4. Flow Chart](#4-Flow-Chart)
