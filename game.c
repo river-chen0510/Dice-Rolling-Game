@@ -65,7 +65,6 @@ void rollDice(){
     gamesPlayed++;
     n++;
 
-    // TODO: in main.c, put srand(time(0)) when calling rollDice();
 }
 
 void displayResults(){
