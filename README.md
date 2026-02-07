@@ -219,7 +219,7 @@ playerResult[100]
 computerResult[100]
 ```
 
-## 3.3. Advanced Memory
+## 3.3. Advanced "Memory"
 To make selection 2 work (display results), this game needs to be able to store the results of the player and computer, of each round. Becuase it's impossible to make an endless array, The maximum number of rounds that can be played is 100. 
 ```
 int rounds = 100;
